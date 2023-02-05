@@ -14,6 +14,7 @@ namespace CommandQueryResponsibilitySegregation.Repositories
 
         public async Task<Product> AddProduct(Product productDetails)
         {
+
             var result = _dbContext.Products.Add(productDetails);
             await _dbContext.SaveChangesAsync();
             return result.Entity;
