@@ -1,6 +1,9 @@
-﻿namespace CommandQueryResponsibilitySegregation.Commands
+﻿using CommandQueryResponsibilitySegregation.Models;
+using MediatR;
+
+namespace CommandQueryResponsibilitySegregation.Commands
 {
-    public class CreateProductCommand
+    public class CreateProductCommand : IRequest<Product>
     {
         public string ProductName { get; set; }
         public string ProductSKU { get; set; }
