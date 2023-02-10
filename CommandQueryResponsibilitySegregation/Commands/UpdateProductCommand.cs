@@ -1,6 +1,8 @@
-﻿namespace CommandQueryResponsibilitySegregation.Commands
+﻿using MediatR;
+
+namespace CommandQueryResponsibilitySegregation.Commands
 {
-    public class UpdateProductCommand
+    public class UpdateProductCommand : IRequest<int>
     {
         public int Id { get; set; }
         public string ProductName { get; set; }
