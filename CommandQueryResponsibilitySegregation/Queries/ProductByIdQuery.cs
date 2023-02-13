@@ -1,5 +1,4 @@
-﻿
-using CommandQueryResponsibilitySegregation.Models;
+﻿using CommandQueryResponsibilitySegregation.Models;
 using MediatR;
 
 namespace CommandQueryResponsibilitySegregation.Queries
