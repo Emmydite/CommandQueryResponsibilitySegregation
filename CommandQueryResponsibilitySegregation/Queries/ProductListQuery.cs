@@ -1,6 +1,9 @@
-﻿namespace CommandQueryResponsibilitySegregation.Queries
+﻿using CommandQueryResponsibilitySegregation.Models;
+using MediatR;
+
+namespace CommandQueryResponsibilitySegregation.Queries
 {
-    public class ProductListQuery
+    public class ProductListQuery : IRequest<List<Product>>
     {
     }
 }
