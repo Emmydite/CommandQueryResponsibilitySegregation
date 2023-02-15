@@ -2,6 +2,7 @@
 using CommandQueryResponsibilitySegregation.Models;
 using CommandQueryResponsibilitySegregation.Repositories;
 using MediatR;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace CommandQueryResponsibilitySegregation.Handlers
 {
@@ -13,9 +14,16 @@ namespace CommandQueryResponsibilitySegregation.Handlers
             _productRepository = productRepository;
         }
 
-        public Task<Product> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+        public async Task<Product> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var product = new Product()
+            {
+                ProductName = command.ProductName,
+                ProductSKU = command.ProductSKU,
+                Price = command.Price,
+            };
+
+            return await _productRepository.AddProduct(product);
         }
     }
 }
