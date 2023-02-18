@@ -18,7 +18,7 @@ namespace CommandQueryResponsibilitySegregation.Handlers
             if (product == null)
                 return default;
 
-            return await _productRepository.DeleteProduct(command.Id)
+            return await _productRepository.DeleteProduct(command.Id);
         }
     }
 }
