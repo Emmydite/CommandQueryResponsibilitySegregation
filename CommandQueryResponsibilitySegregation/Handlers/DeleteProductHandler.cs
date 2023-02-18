@@ -12,12 +12,13 @@ namespace CommandQueryResponsibilitySegregation.Handlers
             _productRepository = productRepository;
         }
 
-        public Task<int> Handle(DeleteProductCommand command, CancellationToken cancellationToken)
+        public async Task<int> Handle(DeleteProductCommand command, CancellationToken cancellationToken)
         {
             var product = await _productRepository.GetProductById(command.Id);
             if (product == null)
                 return default;
 
+            return await _productRepository.DeleteProduct(command.Id)
         }
     }
 }
