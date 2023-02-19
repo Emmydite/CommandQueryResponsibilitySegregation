@@ -1,6 +1,7 @@
 ﻿using CommandQueryResponsibilitySegregation.Commands;
 using CommandQueryResponsibilitySegregation.Repositories;
 using MediatR;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace CommandQueryResponsibilitySegregation.Handlers
 {
@@ -12,6 +13,9 @@ namespace CommandQueryResponsibilitySegregation.Handlers
             _productRepository = productRepository;
         }
 
-
+        public Task<int> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
+        {
+            
+        }
     }
 }
