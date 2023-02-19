@@ -7,7 +7,7 @@ namespace CommandQueryResponsibilitySegregation.Handlers
         private readonly IProductRepository _productRepository;
         public UpdateProductHandler(IProductRepository productRepository)
         {
-
+            _productRepository = productRepository;
         }
     }
 }
