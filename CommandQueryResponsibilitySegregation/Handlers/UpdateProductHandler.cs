@@ -1,7 +1,6 @@
 ﻿using CommandQueryResponsibilitySegregation.Commands;
 using CommandQueryResponsibilitySegregation.Repositories;
 using MediatR;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace CommandQueryResponsibilitySegregation.Handlers
 {
