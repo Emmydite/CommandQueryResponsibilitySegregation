@@ -15,7 +15,14 @@ namespace CommandQueryResponsibilitySegregation.Handlers
 
         public async Task<Product> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
-            
+            var product = new Product()
+            {
+                ProductName = command.ProductName,
+                ProductSKU = command.ProductSKU,
+                Price = command.Price,
+            };
+
+            return await _productRepository.AddProduct(product);
         }
     }
 }
