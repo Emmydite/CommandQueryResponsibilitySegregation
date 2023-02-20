@@ -22,6 +22,8 @@ namespace CommandQueryResponsibilitySegregation.Handlers
             product.ProductName = command.ProductName;
             product.ProductSKU = command.ProductSKU;
             product.Price = command.Price;
+
+            return await _productRepository.UpdateProduct(product);
         }
     }
 }
