@@ -18,6 +18,10 @@ namespace CommandQueryResponsibilitySegregation.Handlers
             var product = await _productRepository.GetProductById(command.Id);
             if (product == null)
                 return default;
+
+            product.ProductName = command.ProductName;
+            product.ProductSKU = command.ProductSKU;
+            product.Price = command.Price;
         }
     }
 }
