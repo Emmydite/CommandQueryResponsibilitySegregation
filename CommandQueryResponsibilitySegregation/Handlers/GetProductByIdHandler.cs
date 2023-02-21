@@ -5,9 +5,9 @@ namespace CommandQueryResponsibilitySegregation.Handlers
     public class GetProductByIdHandler
     {
         private readonly IProductRepository _productRepository;
-        public GetProductByIdHandler()
+        public GetProductByIdHandler(IProductRepository productRepository)
         {
-
+            
         }
     }
 }
