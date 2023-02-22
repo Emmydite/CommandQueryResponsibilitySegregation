@@ -13,9 +13,9 @@ namespace CommandQueryResponsibilitySegregation.Handlers
             _productRepository = productRepository;
         }
 
-        public Task<Product> Handle(ProductByIdQuery request, CancellationToken cancellationToken)
+        public async Task<Product> Handle(ProductByIdQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
