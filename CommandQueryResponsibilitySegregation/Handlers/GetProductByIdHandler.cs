@@ -15,7 +15,7 @@ namespace CommandQueryResponsibilitySegregation.Handlers
 
         public async Task<Product> Handle(ProductByIdQuery request, CancellationToken cancellationToken)
         {
-            
+            return await _productRepository.GetProductById(request.Id);
         }
     }
 }
