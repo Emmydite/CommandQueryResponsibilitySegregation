@@ -5,7 +5,7 @@ using MediatR;
 
 namespace CommandQueryResponsibilitySegregation.Handlers
 {
-    public class ProductListHandler : IRequestHandler<ProductListQuery, Product>
+    public class ProductListHandler : IRequestHandler<ProductListQuery, List<Product>>
     {
         private readonly IProductRepository _productRepository;
         public ProductListHandler(IProductRepository productRepository)
