@@ -2,6 +2,8 @@
 
 namespace CommandQueryResponsibilitySegregation.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class ProductController : Controller
     {
         public IActionResult Index()
