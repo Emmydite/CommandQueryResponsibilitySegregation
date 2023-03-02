@@ -7,10 +7,10 @@ namespace CommandQueryResponsibilitySegregation.Controllers
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
-        private readonly IMediator mediator;
-        public ProductController()
+        private readonly IMediator _mediator;
+        public ProductController(IMediator mediator)
         {
-
+            _mediator = mediator;
         }
 
         public IActionResult Index()
