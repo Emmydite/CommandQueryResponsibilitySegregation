@@ -4,7 +4,7 @@ namespace CommandQueryResponsibilitySegregation.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProductController : Controller
+    public class ProductController : ControllerBase
     {
         public IActionResult Index()
         {
