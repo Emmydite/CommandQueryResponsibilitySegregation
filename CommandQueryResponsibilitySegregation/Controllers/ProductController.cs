@@ -22,5 +22,7 @@ namespace CommandQueryResponsibilitySegregation.Controllers
 
             return productList;
         }
+
+
     }
 }
