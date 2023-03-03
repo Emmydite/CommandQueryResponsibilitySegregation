@@ -1,4 +1,5 @@
 ﻿using CommandQueryResponsibilitySegregation.Models;
+using CommandQueryResponsibilitySegregation.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,9 @@ namespace CommandQueryResponsibilitySegregation.Controllers
         [HttpGet]
         public async Task<List<Product>> GetProductList()
         {
-            
+            var productList = await _mediator.Send(new ProductListQuery());
+
+            return productList;
         }
     }
 }
