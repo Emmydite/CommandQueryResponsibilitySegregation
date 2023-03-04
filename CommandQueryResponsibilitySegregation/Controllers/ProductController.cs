@@ -23,6 +23,10 @@ namespace CommandQueryResponsibilitySegregation.Controllers
             return productList;
         }
 
-
+        [HttpGet]
+        public async Task<Product> GetProductById(int productId)
+        {
+            
+        }
     }
 }
