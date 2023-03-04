@@ -23,7 +23,7 @@ namespace CommandQueryResponsibilitySegregation.Controllers
             return productList;
         }
 
-        [HttpGet]
+        [HttpGet("productId")]
         public async Task<Product> GetProductById(int productId)
         {
             var product = await _mediator.Send(new ProductByIdQuery() { Id = productId });
