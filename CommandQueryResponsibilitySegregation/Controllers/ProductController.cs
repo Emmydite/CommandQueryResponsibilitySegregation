@@ -1,4 +1,5 @@
-﻿using CommandQueryResponsibilitySegregation.Models;
+﻿using CommandQueryResponsibilitySegregation.Commands;
+using CommandQueryResponsibilitySegregation.Models;
 using CommandQueryResponsibilitySegregation.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -32,9 +33,14 @@ namespace CommandQueryResponsibilitySegregation.Controllers
         }
 
         [HttpPost]
-        public async Task<Product> AddProduct(Product product)
+        public async Task<Product> AddProduct(Product productDetails)
         {
-            
+            var product = await _mediator.Send(new CreateProductCommand(
+                productDetails.ProductName,
+                productDetails.ProductSKU,
+                productDetails.Price));
+
+            return product;
         }
     }
 }
