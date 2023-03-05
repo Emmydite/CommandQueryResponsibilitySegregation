@@ -30,5 +30,11 @@ namespace CommandQueryResponsibilitySegregation.Controllers
 
             return product;
         }
+
+        [HttpPost]
+        public async Task<Product> AddProduct(Product product)
+        {
+            
+        }
     }
 }
