@@ -42,5 +42,10 @@ namespace CommandQueryResponsibilitySegregation.Controllers
 
             return product;
         }
+
+        public async Task<int> UpdateProduct(Product productDetails)
+        {
+            
+        }
     }
 }
