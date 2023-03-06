@@ -43,6 +43,7 @@ namespace CommandQueryResponsibilitySegregation.Controllers
             return product;
         }
 
+        [HttpPut]
         public async Task<int> UpdateProduct(Product productDetails)
         {
             
