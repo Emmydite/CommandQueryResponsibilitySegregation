@@ -51,6 +51,7 @@ namespace CommandQueryResponsibilitySegregation.Controllers
                productDetails.ProductName,
                productDetails.ProductSKU,
                productDetails.Price));
+
             return isProductUpdated;
         }
     }
