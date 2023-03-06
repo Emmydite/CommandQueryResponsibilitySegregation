@@ -46,7 +46,12 @@ namespace CommandQueryResponsibilitySegregation.Controllers
         [HttpPut]
         public async Task<int> UpdateProduct(Product productDetails)
         {
-            
+            var isProductUpdated = await _mediator.Send(new UpdateProductCommand(
+               productDetails.Id,
+               productDetails.ProductName,
+               productDetails.ProductSKU,
+               productDetails.Price));
+            return isProductUpdated;
         }
     }
 }
