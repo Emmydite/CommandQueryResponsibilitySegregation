@@ -58,7 +58,7 @@ namespace CommandQueryResponsibilitySegregation.Controllers
         [HttpDelete]
         public async Task<int> DeleteProduct(int Id)
         {
-            
+            return await _mediator.Send(new DeleteProductCommand() { Id = Id });
         }
     }
 }
