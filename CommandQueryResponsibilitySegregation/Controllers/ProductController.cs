@@ -55,6 +55,7 @@ namespace CommandQueryResponsibilitySegregation.Controllers
             return isProductUpdated;
         }
 
+        [HttpDelete]
         public async Task<int> DeleteProduct(int Id)
         {
             
