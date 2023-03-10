@@ -1,12 +1,13 @@
 using CommandQueryResponsibilitySegregation.Data;
 using CommandQueryResponsibilitySegregation.Repositories;
 using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-//builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 builder.Services.AddDbContext<ApplicationDbContext>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
