@@ -1,7 +1,6 @@
 using CommandQueryResponsibilitySegregation.Data;
 using CommandQueryResponsibilitySegregation.Repositories;
 using MediatR;
-using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
